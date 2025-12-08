@@ -1,3 +1,14 @@
+// Preloader / animação ao carregar
+window.addEventListener("load", () => {
+  const loader = document.querySelector(".page-loader");
+  document.body.classList.remove("loading");
+  document.body.classList.add("ready");
+
+  if (loader) {
+    loader.classList.add("hidden");
+  }
+});
+
 // Atualiza ano automático no footer
 document.getElementById("year").textContent = new Date().getFullYear();
 
