@@ -1,5 +1,9 @@
 # Auron – Desenvolvimento Web, Landing Pages & SEO
 
+![Status](https://img.shields.io/badge/status-em%20desenvolvimento-4C7CFF?style=for-the-badge)
+![Stack](https://img.shields.io/badge/stack-HTML%20%7C%20CSS%20%7C%20JS-27F5C5?style=for-the-badge)
+
+
 A **Auron** é um estúdio de desenvolvimento web focado em criar sites e landing pages que realmente geram resultado.
 
 Este repositório contém o código-fonte do site institucional da Auron, com:
