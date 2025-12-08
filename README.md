@@ -66,12 +66,3 @@ A paleta oficial da Auron:
 | Texto secundário | `#A0A3C2` |
 
 A logo é um **SVG geométrico estilizado** que aparece na navbar e no preloader.
-
----
-
-## 🚀 Como rodar o projeto
-
-### 1. Clone ou baixe o repositório:
-
-```bash
-git clone https://github.com/SEU-USUARIO/auron-site.git
