@@ -1,21 +1,27 @@
 :root {
-  --bg-body: #050712;
-  --bg-section: #070b1c;
-  --bg-card: #0b1024;
+  --bg-body: #05060b;
+  --bg-section: #070912;
+  --bg-card: #0b0f1d;
 
-  --primary: #4c7cff; /* Azul-violeta Auron */
-  --primary-soft: rgba(76, 124, 255, 0.18);
-  --accent: #27f5c5; /* Ciano esverdeado Auron */
-  --accent-soft: rgba(39, 245, 197, 0.18);
+  /* Azul tecnologia Auron */
+  --primary: #4866ff;
+
+  /* Ciano de apoio */
+  --accent: #27f5c5;
+
+  /* Ouro escovado */
+  --gold: #d9b26b;
+  --gold-deep: #b38a46;
+  --gold-soft: rgba(217, 178, 107, 0.25);
 
   --text-main: #f7f7ff;
-  --text-muted: #a0a3c2;
+  --text-muted: #a4a7c4;
 
   --border-soft: rgba(255, 255, 255, 0.06);
-  --shadow-soft: 0 20px 40px rgba(0, 0, 0, 0.45);
-  --radius-lg: 22px;
+  --shadow-soft: 0 28px 60px rgba(0, 0, 0, 0.7);
+  --radius-lg: 26px;
   --radius-full: 999px;
-  --transition-fast: 0.2s ease-out;
+  --transition-fast: 0.22s ease-out;
 }
 
 * {
@@ -25,18 +31,16 @@
 }
 
 body {
-  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
-  background: radial-gradient(
-    circle at top left,
-    #141832 0,
-    var(--bg-body) 45%,
-    #02030a 100%
-  );
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(72, 102, 255, 0.25) 0, transparent 42%),
+    radial-gradient(circle at bottom right, rgba(217, 178, 107, 0.18) 0, transparent 55%),
+    #05060b;
   color: var(--text-main);
   line-height: 1.6;
   scroll-behavior: smooth;
 }
+
 
 a {
   color: inherit;
@@ -190,7 +194,7 @@ section {
   text-transform: uppercase;
   letter-spacing: 0.16em;
   font-size: 0.78rem;
-  color: var(--accent);
+  color: var(--gold);
   font-weight: 600;
   margin-bottom: 0.6rem;
 }
@@ -214,21 +218,22 @@ section {
   position: sticky;
   top: 0;
   z-index: 50;
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(22px);
   background: linear-gradient(
     to bottom,
-    rgba(5, 8, 20, 0.96),
-    rgba(5, 8, 20, 0.92)
+    rgba(5, 6, 14, 0.96),
+    rgba(5, 6, 14, 0.92)
   );
-  border-bottom: 1px solid var(--border-soft);
+  border-bottom: 1px solid rgba(217, 178, 107, 0.14);
 }
 
 .navbar-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.85rem 0;
+  padding: 1rem 0;
 }
+
 
 .brand {
   display: inline-flex;
@@ -242,13 +247,14 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  filter: drop-shadow(0 0 10px rgba(76, 124, 255, 0.8));
+  filter: drop-shadow(0 0 10px rgba(217, 178, 107, 0.8));
 }
 
-.brand-logo .auron-logo {
+.loader-logo .auron-logo {
   width: 100%;
   height: 100%;
   display: block;
+  filter: drop-shadow(0 0 24px rgba(217, 178, 107, 0.85));
 }
 
 .brand-text-main {
@@ -263,11 +269,13 @@ section {
   color: var(--text-muted);
 }
 
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 1.6rem;
-  font-size: 0.92rem;
+.nav-links a {
+  position: relative;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  transition: color var(--transition-fast);
 }
 
 .nav-links a {
@@ -280,10 +288,10 @@ section {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -0.3rem;
+  bottom: -0.35rem;
   width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--accent), var(--primary));
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold), var(--primary));
   transition: width 0.25s ease-out;
 }
 
@@ -298,21 +306,26 @@ section {
 .nav-cta {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.55rem 1.35rem;
+  gap: 0.45rem;
+  padding: 0.55rem 1.4rem;
   border-radius: var(--radius-full);
-  border: 1px solid rgba(39, 245, 197, 0.5);
-  background: radial-gradient(
-    circle at 0 0,
-    var(--accent-soft),
-    transparent 55%
-  );
-  font-size: 0.86rem;
+  border: 1px solid var(--gold-soft);
+  background: radial-gradient(circle at 0 0, rgba(217, 178, 107, 0.22), transparent 60%);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   font-weight: 500;
-  color: var(--accent);
-  box-shadow: 0 0 0 rgba(39, 245, 197, 0.3);
+  color: var(--gold);
+  box-shadow: 0 0 0 rgba(217, 178, 107, 0.25);
   transition: all var(--transition-fast);
 }
+
+.nav-cta:hover {
+  background: radial-gradient(circle at 0 0, rgba(217, 178, 107, 0.32), transparent 70%);
+  box-shadow: 0 0 26px rgba(217, 178, 107, 0.7);
+  transform: translateY(-1px);
+}
+
 
 .nav-cta i {
   font-size: 0.9rem;
@@ -321,10 +334,10 @@ section {
 .nav-cta:hover {
   background: radial-gradient(
     circle at 0 0,
-    rgba(39, 245, 197, 0.26),
+    rgba(217, 178, 107, 0.3),
     transparent 70%
   );
-  box-shadow: 0 0 20px rgba(39, 245, 197, 0.6);
+  box-shadow: 0 0 22px rgba(217, 178, 107, 0.6);
   transform: translateY(-1px);
 }
 
@@ -388,7 +401,7 @@ section {
 }
 
 .hero-title span.highlight {
-  background: linear-gradient(120deg, var(--accent), var(--primary));
+  background: linear-gradient(120deg, var(--gold), var(--primary));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -663,7 +676,7 @@ section {
   padding: 0.5rem 1rem;
   border-radius: 999px;
   background: rgba(5, 8, 20, 0.95);
-  border: 1px solid rgba(39, 245, 197, 0.7);
+  border: 1px solid var(--gold-soft);
   font-size: 0.76rem;
   display: inline-flex;
   align-items: center;
@@ -715,7 +728,7 @@ section {
   inset: -40%;
   background: radial-gradient(
     circle at top left,
-    rgba(76, 124, 255, 0.32),
+    rgba(217, 178, 107, 0.35),
     transparent 55%
   );
   opacity: 0;
@@ -733,7 +746,7 @@ section {
   background: radial-gradient(
     circle at 30% 20%,
     #ffffff 0,
-    var(--primary) 40%,
+    var(--gold) 35%,
     #050814 85%
   );
   margin-bottom: 1rem;
@@ -1000,7 +1013,7 @@ section {
   gap: 0.4rem;
   padding: 0.22rem 0.7rem;
   border-radius: 999px;
-  border: 1px solid rgba(76, 124, 255, 0.8);
+  border: 1px solid var(--gold-soft);
   font-size: 0.78rem;
   color: var(--text-muted);
   margin-bottom: 0.7rem;
@@ -1035,7 +1048,7 @@ section {
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 0.2rem;
-  background: linear-gradient(120deg, var(--accent), var(--primary));
+  background: linear-gradient(120deg, var(--gold), var(--primary));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
