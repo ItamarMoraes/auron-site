@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Auron | Desenvolvimento Web, Landing Pages & SEO</title>
 
-    <!-- SEO básico -->
     <meta
       name="description"
       content="Auron é uma agência especializada em criação de sites, landing pages de alta conversão, SEO e otimização de performance para empresas que querem resultados reais na internet."
@@ -18,7 +17,6 @@
     />
     <meta property="og:type" content="website" />
 
-    <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -26,7 +24,6 @@
       rel="stylesheet"
     />
 
-    <!-- Ícones (para redes sociais / menu) -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -35,11 +32,9 @@
       referrerpolicy="no-referrer"
     />
 
-    <!-- CSS externo -->
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body class="loading">
-    <!-- Preloader Auron -->
     <div class="page-loader">
       <div class="loader-logo-wrap">
         <div class="loader-logo">
@@ -81,7 +76,6 @@
       <span class="loader-text">Construindo sua experiência digital...</span>
     </div>
 
-    <!-- Navbar -->
     <header class="navbar">
       <div class="container navbar-inner">
         <a href="#hero" class="brand">
@@ -144,8 +138,9 @@
       </div>
     </header>
 
-    <!-- Hero -->
     <section id="hero">
+      <section id="hero">
+  <div id="particles-js"></div>
       <div class="container hero-grid">
         <div class="hero-content reveal">
           <div class="hero-kicker">
@@ -235,7 +230,6 @@
       </div>
     </section>
 
-    <!-- Serviços -->
     <section id="servicos">
       <div class="container">
         <div class="section-header reveal">
@@ -374,7 +368,6 @@
       </div>
     </section>
 
-    <!-- Portfólio -->
     <section id="portfolio">
       <div class="container">
         <div class="section-header reveal">
@@ -383,9 +376,7 @@
             Projetos que unem estética, técnica e resultados
           </h2>
           <p class="section-subtitle">
-            Alguns dos tipos de projetos que a Auron entrega. Substitua estes
-            cards pelos seus cases reais com dados de resultado, depoimentos e
-            prints.
+            Alguns dos tipos de projetos que a Auron entrega.
           </p>
         </div>
 
@@ -458,7 +449,6 @@
       </div>
     </section>
 
-    <!-- Processo -->
     <section id="processo">
       <div class="container">
         <div class="section-header reveal">
@@ -548,7 +538,6 @@
       </div>
     </section>
 
-    <!-- Sobre -->
     <section id="sobre">
       <div class="container">
         <div class="about-grid">
@@ -624,7 +613,6 @@
       </div>
     </section>
 
-    <!-- Resultados extras -->
     <section id="resultados">
       <div class="container">
         <div class="section-header reveal">
@@ -664,7 +652,6 @@
       </div>
     </section>
 
-    <!-- Contato -->
     <section id="contato">
       <div class="container">
         <div class="contact-grid">
@@ -704,7 +691,10 @@
           </div>
 
           <div class="contact-card reveal">
-            <form action="#" method="post">
+            <form
+              action="https://formspree.io/f/SEU_CODIGO_FORMSPREE_AQUI"
+              method="POST"
+            >
               <div class="form-grid">
                 <div class="form-group">
                   <label class="form-label" for="nome">Nome completo</label>
@@ -723,7 +713,7 @@
                     class="form-control"
                     type="email"
                     id="email"
-                    name="email"
+                    name="_replyto"
                     placeholder="seuemail@empresa.com"
                     required
                   />
@@ -799,7 +789,6 @@
                   <i class="fa-solid fa-paper-plane"></i>
                 </button>
 
-                <!-- Ajuste o link do WhatsApp abaixo com seu número -->
                 <a
                   href="https://wa.me/5598987303990"
                   target="_blank"
@@ -813,8 +802,7 @@
 
               <p class="form-note">
                 Os dados enviados são usados apenas para retorno do contato e
-                elaboração de proposta. Sem spam e sem compartilhamento com
-                terceiros.
+                elaboração de proposta. Sem spam.
               </p>
             </form>
           </div>
@@ -822,7 +810,6 @@
       </div>
     </section>
 
-    <!-- Footer -->
     <footer>
       <div class="container footer-inner">
         <span
@@ -836,8 +823,8 @@
         </div>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
-    <!-- JS externo -->
     <script src="./assets/js/main.js"></script>
   </body>
 </html>

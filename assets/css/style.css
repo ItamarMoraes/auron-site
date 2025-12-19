@@ -589,6 +589,34 @@ section {
   animation: shimmer 2.4s infinite;
 }
 
+/* O container das partículas deve cobrir toda a seção */
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /* Z-index baixo para ficar atrás do conteúdo */
+  z-index: 1;
+  /* Opcional: garante que não vaze da seção */
+  overflow: hidden;
+}
+
+/* IMPORTANTE: Garantir que o conteúdo do Hero fique NA FRENTE das partículas */
+.hero-grid {
+  position: relative;
+  /* Z-index maior que o das partículas */
+  z-index: 10;
+}
+
+/* Pequeno ajuste na imagem do hero para garantir que ela também fique na frente */
+.hero-visual-wrap {
+    position: relative;
+    z-index: 11;
+}
+
+
+
 @keyframes shimmer {
   0% {
     transform: translateX(-100%);
